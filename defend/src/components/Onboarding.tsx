@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import ProgressBar from './ProgressBar';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
+import Step4 from './Step4';
 
 const Onboarding = () => {
     const [step, setStep] = useState(1);
@@ -14,29 +16,20 @@ const Onboarding = () => {
         setStep((prev) => prev - 1);
     };
 
+    const handleFinish = () => {
+        console.log("Proceso completado");
+    };
+
     return (
         <div className="max-w-3xl mx-auto p-8">
             <h1 className="text-2xl font-bold mb-4">Nuevo Usuario</h1>
 
-            {/* Línea de progreso */}
-            <div className="flex items-center mb-6">
-                {Array.from({ length: 4 }).map((_, index) => (
-                    <React.Fragment key={index}>
-                        <div
-                            className={`w-4 h-4 rounded-full ${index < step ? "bg-red-600" : "bg-gray-300"}`}
-                        />
-                        {index < 3 && (
-                            <div
-                                className={`flex-1 h-1 ${index < step - 1 ? "bg-red-600" : "bg-gray-300"} mx-2`}
-                            />
-                        )}
-                    </React.Fragment>
-                ))}
-            </div>
+            <ProgressBar step={step} />
 
             {step === 1 && <Step1 onNext={handleNext} />}
             {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
             {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
+            {step === 4 && <Step4 onFinish={handleFinish} onPrev={handlePrev} />}
 
         </div>
     );

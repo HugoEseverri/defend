@@ -11,7 +11,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                 Bienvenido. Codefend es una plataforma completa para pentest continuo, detección temprana de amenazas, y protección de assets e infraestructura, empleando una red de hackers descentralizada especializados en diversas áreas.
             </p>
 
-            <h2 className="text-xl font-semibold">Personal Details</h2>
+            <h2 className="text-xl font-semibold">Personal Details:</h2>
 
             <form className="space-y-4">
                 <input
