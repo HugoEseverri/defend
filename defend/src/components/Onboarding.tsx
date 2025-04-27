@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Step1 from './Step1';
 import Step2 from './Step2';
+import Step3 from './Step3';
 
 const Onboarding = () => {
     const [step, setStep] = useState(1);
@@ -33,9 +34,9 @@ const Onboarding = () => {
                 ))}
             </div>
 
-            {/* Renderizado del paso actual */}
             {step === 1 && <Step1 onNext={handleNext} />}
             {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
+            {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
 
         </div>
     );

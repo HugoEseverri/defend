@@ -51,14 +51,16 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
             <div className="flex justify-between pt-6">
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-gray-300 text-white"
+                    className="px-6 py-2 rounded-md bg-gray-300 text-gray-700"
+                    onClick={onPrev}
                 >
                     Previo
                 </button>
 
                 <button
-                    type="submit"
+                    type="button"
                     className="px-6 py-2 rounded-md bg-red-600 text-white"
+                    onClick={onNext}
                 >
                     Próximo
                 </button>
