@@ -7,14 +7,14 @@ interface Step3Props {
 
 const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
     return (
-        <div className='flex flex-col justify-between min-h-[600px] space-y-6 w-[450px]'>
+        <div className='flex flex-col justify-between min-h-[600px] space-y-6 w-[400px] p-[20px]'>
             <p className="text-gray-600">
                 Una vez que crees tu usuario, vamos a ayudarte con el alta de tu primer recurso,
                 y realizaremos una serie de pruebas automatizadas empleando escanners automatizados
                 e inteligencia artificial.
             </p>
 
-            <div className="flex justify-center">
+            <div className="flex">
                 <div className="relative">
                     <FaEnvelope className="text-6xl text-red-600" />
                     <div className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">

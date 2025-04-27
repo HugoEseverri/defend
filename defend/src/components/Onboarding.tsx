@@ -21,8 +21,8 @@ const Onboarding = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto p-8">
-            <h1 className="text-2xl font-bold mb-4">Nuevo Usuario</h1>
+        <div className="w-[500px] mx-auto p-8 border-gray-300 border rounded">
+            <h1 className="text-2xl font-bold mb-4 p-[20px]">Nuevo Usuario</h1>
 
             <ProgressBar step={step} />
 

@@ -11,13 +11,13 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev }) => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     return (
-        <div className="flex flex-col justify-between min-h-[600px] space-y-6 w-[450px]">
-            <p className="text-gray-600 text-center">
+        <div className="flex flex-col justify-between min-h-[600px] space-y-6 w-[400px] p-[20px]">
+            <p className="text-gray-600 text-left">
                 ¡Listo! Alcanzamos la etapa final, solo queda definir tu password para obtener acceso al sistema
                 y nuestra prueba sin cargos. El password debe tener 1 número, 1 letra, 12 caracteres y un símbolo.
             </p>
 
-            <h2 className="text-xl font-bold text-center">Crear un password:</h2>
+            <h2 className="text-xl font-bold text-left">Crear un password:</h2>
 
             <div className="space-y-4">
                 <div className="relative">
