@@ -6,7 +6,7 @@ interface ProgressBarProps {
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ step }) => {
     return (
-        <div className="flex items-center mb-6">
+        <div className="flex items-center mb-6 w-[450px]">
             <div
                 className={`flex-1 h-1 ${step > 0 ? "bg-red-600" : "bg-gray-300"}`}
             />

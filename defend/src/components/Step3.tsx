@@ -7,7 +7,7 @@ interface Step3Props {
 
 const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
     return (
-        <div className="space-y-6 text-center">
+        <div className='flex flex-col justify-between min-h-[600px] space-y-6 w-[450px]'>
             <p className="text-gray-600">
                 Una vez que crees tu usuario, vamos a ayudarte con el alta de tu primer recurso,
                 y realizaremos una serie de pruebas automatizadas empleando escanners automatizados
@@ -29,7 +29,15 @@ const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
                 Please check your inbox, copy the verification code and paste it in the field below
                 to confirm your email. Or click the link in the mail.
             </p>
-
+            <form className="space-y-4">
+                <input
+                    type="text"
+                    name="companyName"
+                    placeholder="Unique reference code"
+                    className="w-full border border-gray-300 rounded-md p-2"
+                    required
+                />
+            </form>
             <div className="flex justify-between pt-6">
                 <button
                     type="button"
