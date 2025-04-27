@@ -6,24 +6,25 @@ interface ProgressBarProps {
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ step }) => {
     return (
-        <div className="flex items-center mb-6 w-[450px]">
+        <div className="flex items-center w-full">
             <div
-                className={`flex-1 h-1 ${step > 0 ? "bg-red-600" : "bg-gray-300"}`}
+                className={`flex-1 h-[2px] ${step > 0 ? "bg-red-600" : "bg-gray-100"}`}
             />
             {Array.from({ length: 4 }).map((_, index) => (
                 <React.Fragment key={index}>
                     <div
-                        className={`w-4 h-4 rounded-full ${index < step ? "bg-red-600" : "bg-gray-300"} mx-2`} // mx-2 agrega un margen entre los círculos
+                        className={`w-[10px] h-[10px] rounded-full border-2 ${index < step ? "border-red-600 bg-white" : "border-gray-100 bg-white"} mx-[2px]`}
                     />
+
                     {index < 3 && (
                         <div
-                            className={`flex-1 h-1 ${index < step - 1 ? "bg-red-600" : "bg-gray-300"}`}
+                            className={`flex-1 h-[2px] ${index < step - 1 ? "bg-red-600" : "bg-gray-100"}`}
                         />
                     )}
                 </React.Fragment>
             ))}
             <div
-                className={`flex-1 h-1 ${step < 4 ? "bg-gray-300" : "bg-gray-300"}`}
+                className={`flex-1 h-[2px] ${step < 4 ? "bg-gray-100" : "bg-gray-100"}`}
             />
         </div>
     );

@@ -7,7 +7,7 @@ interface Step3Props {
 
 const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
     return (
-        <div className='flex flex-col justify-between min-h-[600px] space-y-6 w-[400px] p-[20px]'>
+        <div className='flex flex-col justify-between min-h-[550px] space-y-6 w-[400px] p-[20px]'>
             <p className="text-gray-600">
                 Una vez que crees tu usuario, vamos a ayudarte con el alta de tu primer recurso,
                 y realizaremos una serie de pruebas automatizadas empleando escanners automatizados

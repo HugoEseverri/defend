@@ -6,12 +6,12 @@ interface Step1Props {
 
 const Step1: React.FC<Step1Props> = ({ onNext }) => {
     return (
-        <div className="flex flex-col justify-between min-h-[600px] space-y-6 w-[400px] p-[20px]">
-            <p className="text-gray-700">
+        <div className="flex flex-col min-h-[550px] px-13">
+            <p className="text-gray-500 pb-[28px] leading-relaxed font-medium">
                 Bienvenido. Codefend es una plataforma completa para pentest continuo, detección temprana de amenazas, y protección de assets e infraestructura, empleando una red de hackers descentralizada especializados en diversas áreas.
             </p>
 
-            <h2 className="text-xl font-semibold">Personal Details:</h2>
+            <h2 className="font-semibold pb-[22px]">Personal Details:</h2>
 
             <form className="space-y-4">
                 <input
@@ -41,7 +41,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                 <div className="flex">
                     <select
                         name="countryCode"
-                        className="w-[100px] border-y-1 border-r-1 p-2"
+                        className="w-[100px] border-y-1 border-r-1 border-gray-400 p-2"
                         required
                     >
                         <option value="+1">🇺🇸 +1</option>
@@ -53,15 +53,15 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                     <input
                         type="tel"
                         name="phone"
-                        placeholder="Phone Number"
-                        className="flex-1 p-2"
+                        placeholder="Phone number"
+                        className="flex-1 py-2 px-4"
                         required
                     />
                 </div>
-                <div className="flex justify-end pt-6">
+                <div className="flex justify-end pt-5 ">
                     <button
                         type="button"
-                        className="px-6 py-2 rounded-md bg-red-400 text-white"
+                        className="py-2 rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                         onClick={onNext}
                     >
                         Próximo

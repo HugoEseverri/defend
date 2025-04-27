@@ -13,7 +13,7 @@ function Page() {
   };
 
   return (
-    <div>
+    <div className='bg-gray-400'>
       <Onboarding onClose={handleClose} onSubmit={handleSubmit} />
     </div>
   );

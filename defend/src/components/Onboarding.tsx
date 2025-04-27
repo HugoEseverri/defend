@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import ProgressBar from './ProgressBar';
+import Image from 'next/image';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
 import Step4 from './Step4';
 
-const Onboarding = () => {
+interface OnboardingProps {
+    onClose: () => void;
+    onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+const Onboarding: React.FC<OnboardingProps> = ({ onClose, onSubmit }) => {
     const [step, setStep] = useState(1);
 
     const handleNext = () => {
@@ -21,18 +27,30 @@ const Onboarding = () => {
     };
 
     return (
-        <div className="w-[500px] mx-auto p-8 border-gray-300 border rounded">
-            <h1 className="text-2xl font-bold mb-4 p-[20px]">Nuevo Usuario</h1>
+        <div className="w-[500px] mx-auto border-gray-300 border rounded bg-white">
+            <Image
+                src="/logo-color.png"
+                alt="Codefend logo"
+                width={240}
+                height={40}
+                className='ml-15 mt-7 mb-7'
+            />
 
-            <ProgressBar step={step} />
+            <h1 className="font-semibold mb-3 ml-[63px] py-3 text-gray-700">Nuevo usuario</h1>
+            <div className="mb-4 pt-3">
+                <ProgressBar step={step} />
+            </div>
 
-            {step === 1 && <Step1 onNext={handleNext} />}
-            {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
-            {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
-            {step === 4 && <Step4 onFinish={handleFinish} onPrev={handlePrev} />}
-
+            <div className='px-8'>
+                {step === 1 && <Step1 onNext={handleNext} />}
+                {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
+                {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
+                {step === 4 && <Step4 onFinish={handleFinish} onPrev={handlePrev} />}
+            </div>
         </div>
     );
+
+
 };
 
 export default Onboarding;

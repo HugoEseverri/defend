@@ -7,7 +7,7 @@ interface Step2Props {
 
 const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
     return (
-        <div className="flex flex-col justify-between min-h-[600px] space-y-6 w-[400px] p-[20px]">
+        <div className="flex flex-col justify-between min-h-[550px] space-y-6 w-[400px] p-[20px]">
             <p className="text-gray-700">
                 Vamos a intentar hackearte lo antes posible. Conducimos toda clase de pruebas sobre la superficie de tu empresa, desde pentest convencional, hasta detección de dataleaks, técnicas sociales avanzadas y más...
             </p>
