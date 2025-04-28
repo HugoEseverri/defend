@@ -7,7 +7,7 @@ interface Step1Props {
 const Step1: React.FC<Step1Props> = ({ onNext }) => {
     return (
         <div className="flex flex-col min-h-[550px] px-13">
-            <p className="text-gray-500 pb-[28px] leading-relaxed font-medium">
+            <p className="text-[#5C5C5C] pb-[28px] font-semibold leading-relaxed">
                 Bienvenido. Codefend es una plataforma completa para pentest continuo, detección temprana de amenazas, y protección de assets e infraestructura, empleando una red de hackers descentralizada especializados en diversas áreas.
             </p>
 
@@ -61,7 +61,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                 <div className="flex justify-end pt-5 ">
                     <button
                         type="button"
-                        className="py-2 rounded-md bg-red-400 text-white w-[185px] h-[47px]"
+                        className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                         onClick={onNext}
                     >
                         Próximo

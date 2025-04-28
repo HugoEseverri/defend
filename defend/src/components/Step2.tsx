@@ -7,19 +7,19 @@ interface Step2Props {
 
 const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
     return (
-        <div className="flex flex-col justify-between min-h-[550px] space-y-6 w-[400px] p-[20px]">
-            <p className="text-gray-700">
+        <div className="flex flex-col min-h-[550px] px-13">
+            <p className="text-[#5C5C5C] pb-[28px] leading-relaxed font-semibold px-2">
                 Vamos a intentar hackearte lo antes posible. Conducimos toda clase de pruebas sobre la superficie de tu empresa, desde pentest convencional, hasta detección de dataleaks, técnicas sociales avanzadas y más...
             </p>
 
-            <h2 className="text-xl font-semibold">Business Details:</h2>
+            <h2 className="font-semibold pb-[22px]">Business details:</h2>
 
             <form className="space-y-4">
                 <input
                     type="text"
                     name="companyName"
                     placeholder="Nombre de la empresa"
-                    className="w-full border border-gray-300 rounded-md p-2"
+                    className="w-full p-2"
                     required
                 />
 
@@ -27,7 +27,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
                     type="text"
                     name="companyWebsite"
                     placeholder="Web de la empresa"
-                    className="w-full border border-gray-300 rounded-md p-2"
+                    className="w-full p-2"
                     required
                 />
 
@@ -35,7 +35,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
                     type="text"
                     name="companySize"
                     placeholder="Tamaño de la empresa"
-                    className="w-full border border-gray-300 rounded-md p-2"
+                    className="w-full p-2"
                     required
                 />
 
@@ -43,15 +43,15 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
                     type="text"
                     name="languagePreference"
                     placeholder="Preferencia de idioma"
-                    className="w-full border border-gray-300 rounded-md p-2"
+                    className="w-full p-2"
                     required
                 />
             </form>
 
-            <div className="flex justify-between pt-6">
+            <div className="flex pt-5">
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-gray-300 text-gray-700"
+                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
                     onClick={onPrev}
                 >
                     Previo
@@ -59,7 +59,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
 
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-red-600 text-white"
+                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                     onClick={onNext}
                 >
                     Próximo
