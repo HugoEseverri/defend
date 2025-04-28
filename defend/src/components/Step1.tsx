@@ -7,41 +7,38 @@ interface Step1Props {
 const Step1: React.FC<Step1Props> = ({ onNext }) => {
     return (
         <div className="flex flex-col min-h-[550px] px-13">
-            <p className="text-[#5C5C5C] pb-[28px] font-semibold leading-relaxed">
+            <p className="text-[#5C5C5C] pb-[28px] font-medium leading-relaxed px-2">
                 Bienvenido. Codefend es una plataforma completa para pentest continuo, detección temprana de amenazas, y protección de assets e infraestructura, empleando una red de hackers descentralizada especializados en diversas áreas.
             </p>
 
             <h2 className="font-semibold pb-[22px]">Personal Details:</h2>
 
-            <form className="space-y-4">
+            <form className="space-y-3">
                 <input
                     type="text"
                     name="firstName"
                     placeholder="First Name"
-                    className="w-full p-2"
+                    className="w-full p-2 caret-red-500 border border-transparent focus:border-red-500 focus:outline-none rounded-md"
                     required
                 />
-
                 <input
                     type="text"
                     name="lastName"
                     placeholder="Last Name"
-                    className="w-full p-2"
+                    className="w-full p-2 caret-red-500 border border-transparent focus:border-red-500 focus:outline-none rounded-md"
                     required
                 />
-
                 <input
                     type="email"
                     name="email"
                     placeholder="Professional Email"
-                    className="w-full p-2"
+                    className="w-full p-2 caret-red-500 border border-transparent focus:border-red-500 focus:outline-none rounded-md"
                     required
                 />
-
                 <div className="flex">
                     <select
                         name="countryCode"
-                        className="w-[100px] border-y-1 border-r-1 border-gray-400 p-2"
+                        className="w-[100px] border-y-1 border-r-1 border-gray-400 p-2 focus:border-red-500 focus:outline-none"
                         required
                     >
                         <option value="+1">🇺🇸 +1</option>
@@ -49,19 +46,18 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                         <option value="+34">🇪🇸 +34</option>
                         <option value="+57">🇨🇴 +57</option>
                     </select>
-
                     <input
                         type="tel"
                         name="phone"
                         placeholder="Phone number"
-                        className="flex-1 py-2 px-4"
+                        className="flex-1 py-2 px-4 caret-red-500 border border-transparent focus:border-red-500 focus:outline-none rounded-md"
                         required
                     />
                 </div>
-                <div className="flex justify-end pt-5 ">
+                <div className="flex justify-end mt-9">
                     <button
                         type="button"
-                        className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
+                        className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px] mr-3"
                         onClick={onNext}
                     >
                         Próximo

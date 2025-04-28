@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaEnvelope } from 'react-icons/fa';
+import Image from 'next/image';
+
+
 interface Step3Props {
     onNext: () => void;
     onPrev: () => void;
@@ -7,49 +9,44 @@ interface Step3Props {
 
 const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
     return (
-        <div className='flex flex-col justify-between min-h-[550px] space-y-6 w-[400px] p-[20px]'>
-            <p className="text-gray-600">
+        <div className='flex flex-col min-h-[550px] px-13'>
+            <p className="text-[#5C5C5C] pb-[10px] leading-relaxed font-medium px-2">
                 Una vez que crees tu usuario, vamos a ayudarte con el alta de tu primer recurso,
                 y realizaremos una serie de pruebas automatizadas empleando escanners automatizados
                 e inteligencia artificial.
             </p>
-
-            <div className="flex">
-                <div className="relative">
-                    <FaEnvelope className="text-6xl text-red-600" />
-                    <div className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                        1
-                    </div>
-                </div>
-            </div>
-
-            <h2 className="text-xl font-bold">Confirme su email</h2>
-
-            <p className="text-gray-600">
+            <Image
+                src="/iconomail.png"
+                alt='ícono de email'
+                width={100}
+                height={100}
+                className='mb-5'
+            />
+            <h2 className="font-semibold pb-[17px]">Confirme su email</h2>
+            <p className="text-gray-600 mb-4">
                 Please check your inbox, copy the verification code and paste it in the field below
-                to confirm your email. Or click the link in the mail.
+                to confirm your email. <strong>Or click, the link in the mail.</strong>
             </p>
-            <form className="space-y-4">
+            <form className="space-y-3">
                 <input
                     type="text"
                     name="companyName"
                     placeholder="Unique reference code"
-                    className="w-full border border-gray-300 rounded-md p-2"
+                    className="w-full p-2"
                     required
                 />
             </form>
-            <div className="flex justify-between pt-6">
+            <div className="flex mt-[38px]">
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-gray-300 text-gray-700"
+                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
                     onClick={onPrev}
                 >
                     Previo
                 </button>
-
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-red-600 text-white"
+                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                     onClick={onNext}
                 >
                     Próximo

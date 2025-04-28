@@ -9,69 +9,70 @@ interface Step4Props {
 const Step4: React.FC<Step4Props> = ({ onFinish, onPrev }) => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+    
     return (
-        <div className="flex flex-col justify-between min-h-[550px] space-y-6 w-[400px] p-[20px]">
-            <p className="text-gray-600 text-left">
+        <div className="flex flex-col min-h-[550px] px-13">
+            <p className="text-[#5C5C5C] mb-[54px] leading-relaxed font-medium">
                 ¡Listo! Alcanzamos la etapa final, solo queda definir tu password para obtener acceso al sistema
                 y nuestra prueba sin cargos. El password debe tener 1 número, 1 letra, 12 caracteres y un símbolo.
             </p>
-
-            <h2 className="text-xl font-bold text-left">Crear un password:</h2>
-
+            <h2 className="font-semibold pb-[22px]">Crear un password:</h2>
             <div className="space-y-4">
                 <div className="relative">
                     <input
                         type={showPassword ? "text" : "password"}
                         name="password"
                         placeholder="Password"
-                        className="w-full border border-gray-300 rounded-md p-2 pr-10"
+                        className="w-full p-2 pr-10"
                         required
                     />
                     <div
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
                         onClick={() => setShowPassword(!showPassword)}
                     >
-                        {showPassword ? <FaEyeSlash /> : <FaEye />}
+                        {showPassword ? (
+                            <FaEyeSlash className="text-gray-500" />
+                        ) : (
+                            <FaEye className="text-gray-400" />
+                        )}
                     </div>
                 </div>
-
                 <div className="relative">
                     <input
                         type={showConfirmPassword ? "text" : "password"}
                         name="confirmPassword"
-                        placeholder="Confirm Password"
-                        className="w-full border border-gray-300 rounded-md p-2 pr-10"
+                        placeholder="Confirmar password"
+                        className="w-full p-2 pr-10"
                         required
                     />
                     <div
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     >
-                        {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                        {showConfirmPassword ? (
+                            <FaEyeSlash className="text-gray-500" />
+                        ) : (
+                            <FaEye className="text-gray-400" />
+                        )}
                     </div>
                 </div>
             </div>
-
-            {/* Botones */}
-            <div className="flex justify-between pt-6">
+            <div className="flex justify-end mt-[144px]">
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-gray-300 text-gray-700"
+                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
                     onClick={onPrev}
                 >
                     Previo
                 </button>
-
                 <button
                     type="button"
-                    className="px-6 py-2 rounded-md bg-red-600 text-white"
+                    className="rounded-md bg-red-400 text-white w-[185px] h-[47px] mr-3"
                     onClick={onFinish}
                 >
                     Finalizar
                 </button>
             </div>
-
         </div>
     );
 };
