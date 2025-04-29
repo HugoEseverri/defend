@@ -26,7 +26,7 @@ const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
     };
 
     return (
-        <div className="w-[500px] mx-auto border-gray-300 border rounded bg-white">
+        <div className="w-[440px] mx-auto border-gray-300 border rounded bg-white">
             <Image
                 src="/logo-color.png"
                 alt="Codefend logo"

@@ -18,7 +18,7 @@ const subdomains = [
 
 const Step1: React.FC<Step1Props> = ({ onNext, onPrev }) => {
     return (
-        <div className="flex flex-col min-h-[550px] px-14 text-[16px]">
+        <div className="flex flex-col min-h-[550px] px-8 text-[16px]">
             <p className="text-[#5C5C5C] pb-[20px]  leading-relaxed tracking-normal">
                 <strong>Su usuario a sido creado.</strong> verifique su dominio y el alcance y presione continuar para añadir su primer recurso. A continuación vamos a realizar un análisis automatizado sobre su dominio principal.
             </p>
