@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Step1 from './OnboardStep1';
 import Step2 from './OnboardStep2';
-
-
+import Step3 from './OnboardStep3';
 
 interface OnboardProps {
     onClose: () => void;
     onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
+const Onboard: React.FC<OnboardProps> = () => {
     const [step, setStep] = useState(1);
 
     const handleNext = () => {
@@ -19,10 +18,6 @@ const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
 
     const handlePrev = () => {
         setStep((prev) => prev - 1);
-    };
-
-    const handleFinish = () => {
-        console.log("Proceso completado");
     };
 
     return (
@@ -37,7 +32,7 @@ const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
             <div className='px-8'>
                 {step === 1 && <Step1 onNext={handleNext} onPrev={handlePrev} />}
                 {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
-                {/* {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />} */}
+                {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
             </div>
         </div>
     );
