@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Step1 from './OnboardStep1';
+import Step2 from './OnboardStep2';
 
 
 
@@ -35,8 +36,8 @@ const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
             />
             <div className='px-8'>
                 {step === 1 && <Step1 onNext={handleNext} onPrev={handlePrev} />}
-                {/* {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
-                {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />} */}
+                {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
+                {/* {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />} */}
             </div>
         </div>
     );
