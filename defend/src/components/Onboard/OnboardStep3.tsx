@@ -44,15 +44,14 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrev }) => {
                 <p className='mt-1'><strong>- Tiempo promedio estimado:</strong> 5′32″</p>
             </div>
 
-            <div className="flex mt-9 pb-7">
+            <div className="flex mt-5 pb-7">
                 <button
                     type="button"
-                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
+                    className="py-[7px] rounded-md bg-gray-300 text-white w-[140px] h-[43px]"
                     onClick={onPrev}
                 >
                     Dashboard
                 </button>
-
             </div>
         </div>
     );

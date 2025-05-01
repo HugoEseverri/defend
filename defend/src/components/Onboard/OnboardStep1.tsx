@@ -67,7 +67,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrev }) => {
                 </button>
                 <button
                     type="button"
-                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
+                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[43px]"
                     onClick={onNext}
                 >
                     Próximo
