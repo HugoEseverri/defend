@@ -37,8 +37,6 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrev }) => {
                         />
                     </div>
 
-
-
                 </div>
                 <div className='flex justify-between items-center px-2 mb-3'>
                     <h3 className='text-gray-800 font-semibold'>mercadolibre.com</h3>
