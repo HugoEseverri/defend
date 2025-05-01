@@ -1,6 +1,7 @@
 'use client';
 import Onboard from '@/components/Onboard/Onboard';
 import React from 'react';
+import Navbar from '@/components/Navbar/Navbar';
 
 function Page() {
   const handleClose = () => {
@@ -14,7 +15,8 @@ function Page() {
 
   return (
     <div className='bg-gray-400'>
-      <Onboard onClose={handleClose} onSubmit={handleSubmit} />
+      <Navbar/>
+      {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
     </div>
   );
 }
