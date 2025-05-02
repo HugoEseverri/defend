@@ -2,6 +2,8 @@
 import Onboard from '@/components/Onboard/Onboard';
 import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
+import SurfaceExploration from '@/components/SurfaceExploration/SurfaceExploration';
+import RadarScanner from '@/components/Radar/Radar';
 
 function Page() {
   const handleClose = () => {
@@ -17,6 +19,7 @@ function Page() {
     <div className='bg-gray-400'>
       <Navbar/>
       {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
+      <SurfaceExploration/>
     </div>
   );
 }
