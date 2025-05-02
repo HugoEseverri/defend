@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import SurfaceExploration from '@/components/SurfaceExploration/SurfaceExploration';
 import RadarScanner from '@/components/Radar/Radar';
+import Resources from '@/components/Resources/Resources';
 
 function Page() {
   const handleClose = () => {
@@ -20,6 +21,7 @@ function Page() {
       <Navbar/>
       {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
       <SurfaceExploration/>
+      <Resources/>
     </div>
   );
 }

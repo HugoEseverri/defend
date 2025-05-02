@@ -78,7 +78,7 @@ const generateDistributedPoints = (
 
         if (point) {
             const img = new Image();
-            img.src = `/Bichardo-${(i % 3) + 1}.png`; // Aquí se elige entre Bichardo-1, Bichardo-2 y Bichardo-3
+            img.src = `/Bichardo-${(i % 3) + 1}.png`;
             points.push({
                 x: point.x,
                 y: point.y,
@@ -197,7 +197,6 @@ export default function RadarScanner() {
                 ctx.stroke();
             });
 
-            // Draw images (bugs) in their positions
             points.forEach(point => {
                 if (point.img.complete) {
                     ctx.save();
@@ -205,8 +204,8 @@ export default function RadarScanner() {
                     ctx.rotate(point.rotation);
                     ctx.drawImage(
                         point.img,
-                        -point.img.width / 2,  // Centrado de la imagen
-                        -point.img.height / 2  // Centrado de la imagen
+                        -point.img.width / 2,
+                        -point.img.height / 2
                     );
                     ctx.restore();
                 }

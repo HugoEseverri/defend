@@ -4,7 +4,7 @@ import RadarScanner from '../Radar/Radar'
 
 function SurfaceExploration() {
     return (
-        <div className="flex w-full max-w-[750px] rounded mx-auto items-center gap-8 p-6 bg-white text-white">
+        <div className="flex w-full max-w-[800px] rounded mx-auto items-center gap-8 p-6 bg-white text-white">
             <div className="w-[40%]">
                 <RadarScanner />
             </div>
