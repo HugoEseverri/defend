@@ -8,6 +8,7 @@ import Resources from '@/components/Resources/Resources';
 import Colaborators from '@/components/Colaborators/Colaborators';
 import Contact from '@/components/Contact/Contact';
 import IssuesCounter from '@/components/IssuesCounter/IssuesCounter';
+import RiskCounter from '@/components/RiskCounter/RiskCounter';
 
 function Page() {
   const handleClose = () => {
@@ -23,6 +24,7 @@ function Page() {
     <div className='bg-gray-400'>
       <Navbar/>
       <IssuesCounter/>
+      <RiskCounter/>
       {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
       <Contact/>
       <Colaborators/>
