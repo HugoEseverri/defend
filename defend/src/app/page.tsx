@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import SurfaceExploration from '@/components/SurfaceExploration/SurfaceExploration';
 import RadarScanner from '@/components/Radar/Radar';
 import Resources from '@/components/Resources/Resources';
+import Colaborators from '@/components/Colaborators/Colaborators';
 
 function Page() {
   const handleClose = () => {
@@ -20,7 +21,8 @@ function Page() {
     <div className='bg-gray-400'>
       <Navbar/>
       {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
-      <SurfaceExploration/>
+      <Colaborators/>
+      {/* <SurfaceExploration/> */}
       <Resources/>
     </div>
   );

@@ -29,14 +29,10 @@ function Resources() {
                     <p className="text-black text-[13px] font-bold">SOCIAL ASSETS</p>
                 </div>
             </div>
-
-
-
-
             <div className='w-[340px] bg-white rounded ml-2'>
                 <div className='flex flex-col justify-center p-6'>
                     <h2 className='text-xl font-semibold text-black'>Añadir recursos</h2>
-                    <p className="text-black leading-relaxed mt-5 text-[16.5px]">
+                    <p className="text-black leading-relaxed mt-5 text-[16.5px] w-[270px]">
                         Añada recursos para que podamos dimensionar su superficie de ataque y diseñar un plan a medida de sus necesidades.
                     </p>
 
