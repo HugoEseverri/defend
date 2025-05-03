@@ -61,7 +61,7 @@ const renderScore = (score: number) => {
 
 const IssuesOverview = () => {
     return (
-        <div className="p-6 w-[850px] bg-white rounded">
+        <div className="p-6 w-[848px] bg-white rounded">
             <h2 className="text-xl font-bold mb-4 pl-3">Issues overview</h2>
 
             <div className="grid grid-cols-[150px_1fr_200px] font-semibold border-b border-gray-300 pb-2 pl-4">

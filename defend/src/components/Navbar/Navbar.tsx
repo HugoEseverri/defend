@@ -8,23 +8,23 @@ function Navbar() {
                 <h2 className="font-bold text-[19.8px] px-6">Main</h2>
                 <ul className="space-y-1 text-[16.5px]">
                     <li>
-                        <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Dashboard</span>
+                        <Link href="/" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
+                            <span>Dashboard</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Team members</span>
+                            <span>Team members</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Orders and payments</span>
+                            <span>Orders and payments</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">User profile</span>
+                            <span>User profile</span>
                         </Link>
                     </li>
                 </ul>
@@ -35,12 +35,12 @@ function Navbar() {
                 <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Web software</span>
+                            <span>Web software</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Mobile software</span>
+                            <span>Mobile software</span>
                         </Link>
                     </li>
                     <li>
@@ -50,7 +50,7 @@ function Navbar() {
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Social attacks</span>
+                            <span>Social attacks</span>
                         </Link>
                     </li>
                 </ul>
@@ -61,22 +61,22 @@ function Navbar() {
                 <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">General informs</span>
+                            <span>General informs</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Open issues</span>
+                            <span>Open issues</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Fixed issues</span>
+                            <span>Fixed issues</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Accepted risks</span>
+                            <span>Accepted risks</span>
                         </Link>
                     </li>
                 </ul>
@@ -87,17 +87,17 @@ function Navbar() {
                 <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Automated web scans</span>
+                            <span>Automated web scans</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Dataleaks explorer</span>
+                            <span>Dataleaks explorer</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Talk to a hacker</span>
+                            <span>Talk to a hacker</span>
                         </Link>
                     </li>
                 </ul>
