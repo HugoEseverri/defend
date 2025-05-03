@@ -13,7 +13,9 @@ import Scanner from '@/components/Scanner/Scanner';
 import Total from '@/components/Total/Total';
 import Home from './Home/page';
 import Row3 from './Row3/page';
-
+import IssuesOverview from '@/components/IssuesOverview/IssuesOverview';
+import RowIssues2 from './RowIssues2/page';
+import FinishedScan from '@/components/FinishedScan/FinishedScan';
 function Page() {
   const handleClose = () => {
     console.log('Modal cerrado');
@@ -26,7 +28,7 @@ function Page() {
 
   return (
     <div>
-      <Home/>
+      <RowIssues2/>
     </div>
   );
 }

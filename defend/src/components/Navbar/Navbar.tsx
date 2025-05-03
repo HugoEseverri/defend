@@ -6,7 +6,7 @@ function Navbar() {
         <div className="flex flex-col bg-white w-[240px] h-full rounded">
             <div className="mt-9">
                 <h2 className="font-bold text-[19.8px] px-6">Main</h2>
-                <ul className="space-y-2 text-[16.5px]">
+                <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
                             <span className="pl-2">Dashboard</span>
@@ -32,7 +32,7 @@ function Navbar() {
 
             <div className="mt-4">
                 <h2 className="font-bold text-[19.8px] px-6">Attack surface</h2>
-                <ul className="space-y-2 text-[16.5px]">
+                <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
                             <span className="pl-2">Web software</span>
@@ -58,7 +58,7 @@ function Navbar() {
 
             <div className="mt-4">
                 <h2 className="font-bold text-[19.8px] px-6">Issues</h2>
-                <ul className="space-y-2 text-[16.5px]">
+                <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
                             <span className="pl-2">General informs</span>
@@ -84,7 +84,7 @@ function Navbar() {
 
             <div className="mt-4">
                 <h2 className="font-bold text-[19.8px] px-6">Toolset</h2>
-                <ul className="space-y-2 text-[16.5px]">
+                <ul className="space-y-1 text-[16.5px]">
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
                             <span className="pl-2">Automated web scans</span>
