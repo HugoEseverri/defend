@@ -7,6 +7,7 @@ import RadarScanner from '@/components/Radar/Radar';
 import Resources from '@/components/Resources/Resources';
 import Colaborators from '@/components/Colaborators/Colaborators';
 import Contact from '@/components/Contact/Contact';
+import IssuesCounter from '@/components/IssuesCounter/IssuesCounter';
 
 function Page() {
   const handleClose = () => {
@@ -21,6 +22,7 @@ function Page() {
   return (
     <div className='bg-gray-400'>
       <Navbar/>
+      <IssuesCounter/>
       {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
       <Contact/>
       <Colaborators/>
