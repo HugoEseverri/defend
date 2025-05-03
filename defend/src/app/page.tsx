@@ -6,6 +6,7 @@ import SurfaceExploration from '@/components/SurfaceExploration/SurfaceExplorati
 import RadarScanner from '@/components/Radar/Radar';
 import Resources from '@/components/Resources/Resources';
 import Colaborators from '@/components/Colaborators/Colaborators';
+import Contact from '@/components/Contact/Contact';
 
 function Page() {
   const handleClose = () => {
@@ -21,6 +22,7 @@ function Page() {
     <div className='bg-gray-400'>
       <Navbar/>
       {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
+      <Contact/>
       <Colaborators/>
       {/* <SurfaceExploration/> */}
       <Resources/>
