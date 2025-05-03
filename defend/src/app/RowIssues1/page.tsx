@@ -6,16 +6,13 @@ import IssuesOverview from '@/components/IssuesOverview/IssuesOverview'
 
 function RowIssues1() {
     return (
-        <div className='w-[850px]'>
-            {/* Contenedor para SurfaceExploration y Resources */}
+        <div className='w-[848px]'>
             <div className="mb-4">
                 <IssuesOverview/>
             </div>
             <div className="mb-4">
                 <Resources />
             </div>
-
-            {/* Contenedor para Colaborators y Contact, alineados horizontalmente */}
             <div className="flex justify-center gap-2">
                 <div className="w-[420px]">
                     <Colaborators />
@@ -27,9 +24,5 @@ function RowIssues1() {
         </div>
     );
 }
-
-    
-
-
 
 export default RowIssues1

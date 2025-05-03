@@ -16,11 +16,11 @@ const DoughnutChart = () => {
             {
                 data: [60, 20, 10, 5, 5],
                 backgroundColor: [
-                    '#EF4444', // red-500
-                    '#F87171', // red-400
-                    '#FCA5A5', // red-300
-                    '#FECACA', // red-200
-                    '#FEE2E2', // red-100
+                    '#EF4444',
+                    '#F87171',
+                    '#FCA5A5',
+                    '#FECACA',
+                    '#FEE2E2',
                 ],
                 borderWidth: 0,
             },

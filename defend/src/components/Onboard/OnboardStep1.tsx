@@ -5,7 +5,9 @@ import Flag from 'react-world-flags'
 interface Step1Props {
     onNext: () => void;
     onPrev: () => void;
+    onClose: () => void;
 }
+
 
 const subdomains = [
     { name: "api.mercadolibre.com", countryCode: "US" },
@@ -16,9 +18,9 @@ const subdomains = [
 ];
 
 
-const Step1: React.FC<Step1Props> = ({ onNext, onPrev }) => {
+const Step1: React.FC<Step1Props> = ({ onNext, onPrev, onClose }) => {
     return (
-        <div className="flex flex-col min-h-[550px] px-8 text-[16px]">
+        <div className="flex flex-col h-[630px] px-8 text-[16px]">
             <p className="text-[#5C5C5C] pb-[20px]  leading-relaxed tracking-normal">
                 <strong>Su usuario a sido creado.</strong> verifique su dominio y el alcance y presione continuar para añadir su primer recurso. A continuación vamos a realizar un análisis automatizado sobre su dominio principal.
             </p>
@@ -58,13 +60,13 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrev }) => {
             </div>
 
             <div className="flex mt-9 pb-7">
-                <button
-                    type="button"
-                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
-                    onClick={onPrev}
-                >
-                    Dashboard
-                </button>
+                    <button
+                        type="button"
+                        className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px] h-[43px]"
+                        onClick={onClose}
+                    >
+                        Dashboard
+                    </button>
                 <button
                     type="button"
                     className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[43px]"

@@ -1,12 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface Step1Props {
-    onNext: () => void;
-    onPrev: () => void;
+interface Step3Props {
+    onClose: () => void;
 }
 
-const Step3: React.FC<Step1Props> = ({ onNext, onPrev }) => {
+const Step3: React.FC<Step3Props> = ({onClose }) => {
     return (
         <div className="flex flex-col min-h-[605px] px-8 text-[15px]">
             <p className="text-[#5C5C5C] pb-[25px] leading-relaxed tracking-normal mt-[5px]">
@@ -45,13 +44,13 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrev }) => {
             </div>
 
             <div className="flex mt-5 pb-7">
-                <button
-                    type="button"
-                    className="py-[7px] rounded-md bg-gray-300 text-white w-[140px] h-[43px]"
-                    onClick={onPrev}
-                >
-                    Dashboard
-                </button>
+                    <button
+                        type="button"
+                        className="py-[7px] rounded-md bg-gray-300 text-white w-[140px] h-[43px]"
+                        onClick={onClose}
+                    >
+                        Dashboard
+                    </button>
             </div>
         </div>
     );

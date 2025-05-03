@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Step1 from './OnboardStep1';
@@ -9,7 +11,7 @@ interface OnboardProps {
     onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const Onboard: React.FC<OnboardProps> = () => {
+const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
     const [step, setStep] = useState(1);
 
     const handleNext = () => {
@@ -21,23 +23,30 @@ const Onboard: React.FC<OnboardProps> = () => {
     };
 
     return (
-        <div className="w-[440px] mx-auto border-gray-300 border rounded bg-white">
-            <Image
-                src="/logo-color.png"
-                alt="Codefend logo"
-                width={240}
-                height={40}
-                className='ml-15 mt-7 mb-7'
-            />
-            <div className='px-8'>
-                {step === 1 && <Step1 onNext={handleNext} onPrev={handlePrev} />}
-                {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
-                {step === 3 && <Step3 onNext={handleNext} onPrev={handlePrev} />}
+        <div className='relative'>
+            <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-50 backdrop-blur-sm z-40" />
+            <div className="w-[440px] mx-auto border-gray-300 border rounded bg-white p-6 z-50 relative">
+                <button
+                    onClick={onClose}
+                    className="absolute top-2 right-2 text-gray-600"
+                >
+                    X
+                </button>
+                <Image
+                    src="/logo-color.png"
+                    alt="Codefend logo"
+                    width={240}
+                    height={40}
+                    className="ml-15 mt-7 mb-7"
+                />
+                <div className="px-8">
+                    {step === 1 && <Step1 onNext={handleNext} onPrev={handlePrev} onClose={onClose} />}
+                    {step === 2 && <Step2 onNext={handleNext} onPrev={handlePrev} />}
+                    {step === 3 && <Step3 onClose={onClose} />}
+                </div>
             </div>
         </div>
     );
-
-
 };
 
 export default Onboard;

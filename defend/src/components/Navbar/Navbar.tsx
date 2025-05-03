@@ -1,7 +1,24 @@
-import React from 'react'
-import Link from 'next/link';
+"use client"
 
-function Navbar() {
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Onboard from '@/components/Onboard/Onboard';
+
+const Navbar = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log('Formulario enviado');
+    };
     return (
         <div className="flex flex-col bg-white w-[240px] h-full rounded">
             <div className="mt-9">
@@ -23,10 +40,28 @@ function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span>User profile</span>
-                        </Link>
+                        <a
+                            href="#"
+                            className="block px-6 py-2 hover:bg-gray-200 transition-colors cursor-pointer"
+                            onClick={handleOpenModal}
+                        >
+                            <span>User Profile</span>
+                        </a>
                     </li>
+
+                    {isModalOpen && (
+                        <>
+
+                            <div
+                                className="fixed inset-0 bg-gray-500 opacity-50 z-40"
+                                onClick={handleCloseModal}
+                            ></div>
+
+                            <div className="fixed inset-0 flex items-center justify-center z-50">
+                                <Onboard onClose={handleCloseModal} onSubmit={handleSubmit} />
+                            </div>
+                        </>
+                    )}
                 </ul>
             </div>
 
