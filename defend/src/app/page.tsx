@@ -9,6 +9,8 @@ import Colaborators from '@/components/Colaborators/Colaborators';
 import Contact from '@/components/Contact/Contact';
 import IssuesCounter from '@/components/IssuesCounter/IssuesCounter';
 import RiskCounter from '@/components/RiskCounter/RiskCounter';
+import Scanner from '@/components/Scanner/Scanner';
+import Total from '@/components/Total/Total';
 
 function Page() {
   const handleClose = () => {
@@ -24,11 +26,14 @@ function Page() {
     <div className='bg-gray-400'>
       <Navbar/>
       <IssuesCounter/>
+      <Scanner progress={60} />
+      <Total/>
+
       <RiskCounter/>
-      {/* <Onboard onClose={handleClose} onSubmit={handleSubmit} /> */}
+      <Onboard onClose={handleClose} onSubmit={handleSubmit} />
       <Contact/>
       <Colaborators/>
-      {/* <SurfaceExploration/> */}
+      <SurfaceExploration/>
       <Resources/>
     </div>
   );
