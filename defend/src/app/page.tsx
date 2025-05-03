@@ -11,6 +11,8 @@ import IssuesCounter from '@/components/IssuesCounter/IssuesCounter';
 import RiskCounter from '@/components/RiskCounter/RiskCounter';
 import Scanner from '@/components/Scanner/Scanner';
 import Total from '@/components/Total/Total';
+import Home from './Home/page';
+import Row3 from './Row3/page';
 
 function Page() {
   const handleClose = () => {
@@ -23,18 +25,8 @@ function Page() {
   };
 
   return (
-    <div className='bg-gray-400'>
-      <Navbar/>
-      <IssuesCounter/>
-      <Scanner progress={60} />
-      <Total/>
-
-      <RiskCounter/>
-      <Onboard onClose={handleClose} onSubmit={handleSubmit} />
-      <Contact/>
-      <Colaborators/>
-      <SurfaceExploration/>
-      <Resources/>
+    <div>
+      <Home/>
     </div>
   );
 }

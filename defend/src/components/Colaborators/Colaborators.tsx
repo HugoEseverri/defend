@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Colaborators() {
     return (
-        <div className='bg-white w-[450px] h-[310px] p-5 rounded'>
+        <div className='bg-white w-[420px] h-[310px] p-5 rounded'>
             <div className='flex '>
                 <div className='mr-4 mt-2 h-[30px]'>
                     <Image
