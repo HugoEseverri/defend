@@ -1,3 +1,4 @@
+// store/useUserStore.ts
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
@@ -10,19 +11,21 @@ interface UserData {
 interface UserStore {
     isRegistered: boolean;
     showOnboarding: boolean;
+    showOnboard: boolean;
     userData: UserData | null;
     registerUser: (data: UserData) => void;
     setPartialUser: (data: Partial<UserData>) => void;
     setPassword: (password: string) => void;
-    closeOnboarding: () => void;
     setShowOnboarding: (value: boolean) => void;
+    setShowOnboard: (value: boolean) => void;
 }
 
 export const useUserStore = create<UserStore>()(
     persist(
-        (set, get) => ({
+        (set) => ({
             isRegistered: false,
             showOnboarding: true,
+            showOnboard: false,
             userData: null,
 
             registerUser: (data) =>
@@ -30,6 +33,7 @@ export const useUserStore = create<UserStore>()(
                     isRegistered: true,
                     userData: data,
                     showOnboarding: false,
+                    showOnboard: true,
                 }),
 
             setPartialUser: (data) =>
@@ -49,8 +53,7 @@ export const useUserStore = create<UserStore>()(
                 })),
 
             setShowOnboarding: (value) => set({ showOnboarding: value }),
-            closeOnboarding: () => set({ showOnboarding: false }),
-
+            setShowOnboard: (value) => set({ showOnboard: value }),
         }),
         {
             name: 'user-store',
