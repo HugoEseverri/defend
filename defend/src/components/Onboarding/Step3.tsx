@@ -9,7 +9,7 @@ interface Step3Props {
 
 const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
     return (
-        <div className='flex flex-col min-h-[550px] px-13'>
+        <div className='flex flex-col h-[550px] px-[22px]'>
             <p className="text-[#5C5C5C] pb-[10px] leading-relaxed font-medium px-2">
                 Una vez que crees tu usuario, vamos a ayudarte con el alta de tu primer recurso,
                 y realizaremos una serie de pruebas automatizadas empleando escanners automatizados
@@ -36,17 +36,17 @@ const Step3: React.FC<Step3Props> = ({ onNext, onPrev }) => {
                     required
                 />
             </form>
-            <div className="flex mt-[38px]">
+            <div className="flex mt-[37px] ml-[8px] gap-[5px]">
                 <button
                     type="button"
-                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
+                    className="py-[7px] mr-1 rounded-md bg-gray-300 text-white w-[120px]"
                     onClick={onPrev}
                 >
                     Previo
                 </button>
                 <button
                     type="button"
-                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
+                    className=" py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                     onClick={onNext}
                 >
                     Próximo

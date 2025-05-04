@@ -27,7 +27,7 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev, onClose }) => {
     };
 
     return (
-        <div className="flex flex-col min-h-[550px] px-13">
+        <div className="flex flex-col h-[550px] px-7">
             <p className="text-[#5C5C5C] mb-[54px] leading-relaxed font-medium">
                 ¡Listo! Alcanzamos la etapa final, solo queda definir tu password para obtener acceso al sistema
                 y nuestra prueba sin cargos. El password debe tener 1 número, 1 letra, 12 caracteres y un símbolo.
@@ -77,17 +77,11 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev, onClose }) => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-end mt-[144px]">
-                <button
-                    type="button"
-                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
-                    onClick={onPrev}
-                >
-                    Previo
-                </button>
+            <div className="flex justify-end mt-[143.5px] mr-[2px]">
+                
                 <button
                     type="submit"
-                    className="rounded-md bg-red-400 text-white w-[185px] h-[47px] mr-3"
+                    className="rounded-md bg-red-400 text-white w-[185px] h-[46px]"
                     onClick={handleFinish}
                 >
                     Finalizar

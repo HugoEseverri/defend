@@ -30,16 +30,16 @@ const Onboarding: React.FC<OnboardingProps> = ({ onClose, onSubmit }) => {
     };
 
     return (
-        <div className="w-[500px] mx-auto border-gray-300 border rounded bg-white">
+        <div className="w-[440px] mx-auto border-gray-300 border rounded bg-white">
             <Image
                 src="/logo-color.png"
                 alt="Codefend logo"
                 width={240}
                 height={40}
-                className='ml-15 mt-7 mb-7'
+                className='ml-12 mt-7 mb-4'
             />
 
-            <h1 className="font-semibold mb-[15px] ml-[63px] py-3 text-gray-700">Nuevo usuario</h1>
+            <h1 className="font-semibold mb-[5px] ml-[64px] py-3 text-gray-700">Nuevo usuario</h1>
             <div className="mb-4 pt-3">
                 <ProgressBar step={step} />
             </div>

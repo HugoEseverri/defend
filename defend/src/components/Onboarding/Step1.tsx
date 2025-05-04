@@ -21,8 +21,8 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
     };
 
     return (
-        <div className="flex flex-col min-h-[550px] px-13">
-            <p className="text-[#5C5C5C] pb-[28px] font-medium leading-relaxed px-2">
+        <div className="flex flex-col h-[550px] px-7">
+            <p className="text-[#5C5C5C] pb-[28px] font-medium leading-relaxed px-0">
                 Bienvenido. Codefend es una plataforma completa para pentest continuo, detección temprana de amenazas, y protección de assets e infraestructura, empleando una red de hackers descentralizada especializados en diversas áreas.
             </p>
 
@@ -61,7 +61,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                         name="countryCode"
                         value={countryCode}
                         onChange={(e) => setCountryCode(e.target.value)}
-                        className="w-[100px] border-y-1 border-r-1 border-gray-400 p-2 focus:border-red-500 focus:outline-none"
+                        className="w-[85px] border-y-1 border-r-1 border-gray-400 p-2 focus:border-red-500 focus:outline-none"
                         required
                     >
                         <option value="+1">🇺🇸 +1</option>
@@ -79,10 +79,10 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
                         required
                     />
                 </div>
-                <div className="flex justify-end mt-9">
+                <div className="flex justify-end mt-9 mr-[2px]">
                     <button
                         type="button"
-                        className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px] mr-3"
+                        className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px] "
                         onClick={handleNext}
                     >
                         Próximo

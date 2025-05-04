@@ -7,8 +7,8 @@ interface Step2Props {
 
 const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
     return (
-        <div className="flex flex-col min-h-[550px] px-13">
-            <p className="text-[#5C5C5C] pb-[28px] leading-relaxed font-medium px-2">
+        <div className="flex flex-col h-[550px] px-[30px]">
+            <p className="text-[#5C5C5C] pb-[28px] leading-relaxed font-medium">
                 Vamos a intentar hackearte lo antes posible. Conducimos toda clase de pruebas sobre la superficie de tu empresa, desde pentest convencional, hasta detección de dataleaks, técnicas sociales avanzadas y más...
             </p>
             <h2 className="font-semibold pb-[22px]">Business details:</h2>
@@ -45,14 +45,14 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrev }) => {
             <div className="flex mt-9">
                 <button
                     type="button"
-                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
+                    className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[120px]"
                     onClick={onPrev}
                 >
                     Previo
                 </button>
                 <button
                     type="button"
-                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
+                    className="ml-[1px] py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                     onClick={onNext}
                 >
                     Próximo
