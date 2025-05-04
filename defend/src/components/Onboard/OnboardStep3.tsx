@@ -43,10 +43,10 @@ const Step3: React.FC<Step3Props> = ({onClose }) => {
                 <p className='mt-1'><strong>- Tiempo promedio estimado:</strong> 5′32″</p>
             </div>
 
-            <div className="flex mt-5 pb-7">
+            <div className="flex mt-[34px]">
                     <button
                         type="button"
-                        className="py-[7px] rounded-md bg-gray-300 text-white w-[140px] h-[43px]"
+                        className="py-[7px] rounded-md bg-gray-300 text-white w-[140px] h-[47px]"
                         onClick={onClose}
                     >
                         Dashboard

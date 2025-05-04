@@ -22,7 +22,7 @@ const Step2: React.FC<Step1Props> = ({ onNext, onPrev }) => {
             </div>
 
 
-            <div className="flex mt-[37px] pb-7">
+            <div className="flex mt-[50px]">
                 <button
                     type="button"
                     className="py-[7px] mr-2 rounded-md bg-gray-300 text-white w-[125px]"
@@ -32,7 +32,7 @@ const Step2: React.FC<Step1Props> = ({ onNext, onPrev }) => {
                 </button>
                 <button
                     type="button"
-                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[43px]"
+                    className="py-[7px] rounded-md bg-red-400 text-white w-[185px] h-[47px]"
                     onClick={onNext}
                 >
                     Analizar
