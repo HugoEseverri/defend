@@ -18,6 +18,7 @@ interface UserStore {
     setPassword: (password: string) => void;
     setShowOnboarding: (value: boolean) => void;
     setShowOnboard: (value: boolean) => void;
+    closeOnboarding: () => void;
 }
 
 export const useUserStore = create<UserStore>()(
@@ -54,6 +55,7 @@ export const useUserStore = create<UserStore>()(
 
             setShowOnboarding: (value) => set({ showOnboarding: value }),
             setShowOnboard: (value) => set({ showOnboard: value }),
+            closeOnboarding: () => set({ showOnboarding: false }),
         }),
         {
             name: 'user-store',

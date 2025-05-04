@@ -86,7 +86,7 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev, onClose }) => {
                     Previo
                 </button>
                 <button
-                    type="button"
+                    type="submit"
                     className="rounded-md bg-red-400 text-white w-[185px] h-[47px] mr-3"
                     onClick={handleFinish}
                 >
