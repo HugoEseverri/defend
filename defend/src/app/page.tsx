@@ -2,6 +2,9 @@
 
 import React from 'react';
 import Home from './Home/page';
+import Onboarding from '@/components/Onboarding/Onboarding';
+import AppShell from './AppShell';
+import NavUser from '@/components/NavUser/NavUser';
 
 
 function Page() {
@@ -16,7 +19,7 @@ function Page() {
 
   return (
     <div>
-      <Home/>
+      <NavUser/>
     </div>
   );
 }

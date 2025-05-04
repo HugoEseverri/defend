@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useUserStore } from '@/store/useUserStore';
 
 interface Step4Props {
     onFinish: () => void;
     onPrev: () => void;
+    onClose: () => void;  // Se agrega el onClose para cerrar el modal desde Step4
 }
 
-const Step4: React.FC<Step4Props> = ({ onFinish, onPrev }) => {
+const Step4: React.FC<Step4Props> = ({ onFinish, onPrev, onClose }) => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    
+    const [password, setPasswordInput] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const setPassword = useUserStore((state) => state.setPassword);
+
+    const handleFinish = () => {
+        if (password !== confirmPassword) {
+            alert('Las contraseñas no coinciden');
+            return;
+        }
+
+        setPassword(password);
+        onClose(); // Llamamos a onClose para cerrar el modal
+        onFinish(); // Llamamos a onFinish para proceder al siguiente paso
+    };
+
     return (
         <div className="flex flex-col min-h-[550px] px-13">
             <p className="text-[#5C5C5C] mb-[54px] leading-relaxed font-medium">
@@ -20,10 +36,12 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev }) => {
             <div className="space-y-4">
                 <div className="relative">
                     <input
-                        type={showPassword ? "text" : "password"}
+                        type={showPassword ? 'text' : 'password'}
                         name="password"
                         placeholder="Password"
                         className="w-full p-2 pr-10"
+                        value={password}
+                        onChange={(e) => setPasswordInput(e.target.value)}
                         required
                     />
                     <div
@@ -39,10 +57,12 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev }) => {
                 </div>
                 <div className="relative">
                     <input
-                        type={showConfirmPassword ? "text" : "password"}
+                        type={showConfirmPassword ? 'text' : 'password'}
                         name="confirmPassword"
                         placeholder="Confirmar password"
                         className="w-full p-2 pr-10"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
                         required
                     />
                     <div
@@ -68,7 +88,7 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev }) => {
                 <button
                     type="button"
                     className="rounded-md bg-red-400 text-white w-[185px] h-[47px] mr-3"
-                    onClick={onFinish}
+                    onClick={handleFinish}
                 >
                     Finalizar
                 </button>

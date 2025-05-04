@@ -3,16 +3,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Onboard from '@/components/Onboard/Onboard';
+import { useUserStore } from '@/store/useUserStore';
 
 const Navbar = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showOnboarding = useUserStore((state) => state.showOnboarding);
+    const closeOnboarding = useUserStore((state) => state.closeOnboarding);
+    const setShowOnboarding = useUserStore((state) => state.setShowOnboarding);
 
     const handleOpenModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
+        setShowOnboarding(true);
     };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -49,19 +48,19 @@ const Navbar = () => {
                         </a>
                     </li>
 
-                    {isModalOpen && (
+                    {showOnboarding && (
                         <>
-
                             <div
                                 className="fixed inset-0 bg-gray-500 opacity-50 z-40"
-                                onClick={handleCloseModal}
+                                onClick={closeOnboarding}
                             ></div>
 
                             <div className="fixed inset-0 flex items-center justify-center z-50">
-                                <Onboard onClose={handleCloseModal} onSubmit={handleSubmit} />
+                                <Onboard onClose={closeOnboarding} onSubmit={() => { }} />
                             </div>
                         </>
                     )}
+
                 </ul>
             </div>
 
