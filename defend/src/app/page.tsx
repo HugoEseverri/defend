@@ -19,7 +19,7 @@ function Page() {
 
   return (
     <div>
-      <NavUser/>
+      <AppShell/>
     </div>
   );
 }

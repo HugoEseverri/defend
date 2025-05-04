@@ -1,3 +1,4 @@
+// layout.tsx (NO CLIENT COMPONENT)
 import type { Metadata } from "next";
 import { Questrial } from "next/font/google";
 import "./globals.css";
@@ -15,14 +16,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${questrial.variable} antialiased`}
-      >
+      <body className={`${questrial.variable} antialiased`}>
         {children}
       </body>
     </html>

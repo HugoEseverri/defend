@@ -1,8 +1,8 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import { useUserStore } from '@/store/useUserStore'
-
-
 
 function NavUser() {
     const userData = useUserStore((state) => state.userData);
@@ -24,9 +24,9 @@ function NavUser() {
     
 
     return (
-        <div className='w-[1700px] flex justify-between rounded items-center  h-[50px] bg-white'>
+        <div className='w-[1622px] flex justify-between rounded items-center ml-4 mt-2 h-[50px] bg-white'>
             {/* Sección izquierda */}
-            <div className='flex items-center gap-2 text-sm'>
+            <div className='flex items-center gap-2 text-sm ml-4'>
                 <Image
                     src="/add-scope.png"
                     alt='Add Scope'
