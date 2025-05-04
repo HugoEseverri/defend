@@ -15,11 +15,14 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
     const setPartialUser = useUserStore((state) => state.setPartialUser);
 
     const handleNext = () => {
-        // Guarda solo nombre completo y email en el store
+        if (!firstName.trim() || !lastName.trim() || !email.trim()) {
+            alert("Por favor completá todos los campos obligatorios.");
+            return;
+        }
         setPartialUser({ name: `${firstName} ${lastName}`, email });
         onNext();
     };
-
+    
     return (
         <div className="flex flex-col h-[550px] px-7">
             <p className="text-[#5C5C5C] pb-[28px] font-medium leading-relaxed px-0">

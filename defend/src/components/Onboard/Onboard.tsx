@@ -24,14 +24,8 @@ const Onboard: React.FC<OnboardProps> = ({ onClose, onSubmit }) => {
 
     return (
         <div className='relative'>
-            {/* <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-50 backdrop-blur-sm z-40" /> */}
+            <div className="fixed top-0 left-0 right-0 bottom-0  z-40" />
             <div className="w-[440px] mx-auto border-gray-300 border rounded bg-white p-6 z-50 relative">
-                <button
-                    onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-600"
-                >
-                    X
-                </button>
                 <Image
                     src="/logo-color.png"
                     alt="Codefend logo"

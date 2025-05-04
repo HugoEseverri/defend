@@ -65,7 +65,6 @@ export const ProgressCircle = ({
                         r={radius}
                         fill="transparent"
                     />
-                    {/* Progreso */}
                     <circle
                         stroke="url(#progressGradient)"
                         strokeWidth={strokeWidth}
@@ -83,7 +82,6 @@ export const ProgressCircle = ({
                         }}
                     />
 
-                    {/* Puntos girando */}
                     <circle r={strokeWidth / 4} fill="#f87171" filter="url(#glow)">
                         <animateMotion
                             path={`M ${center + radius} ${center} A ${radius} ${radius} 0 1 1 ${center - radius} ${center} A ${radius} ${radius} 0 1 1 ${center + radius} ${center}`}
@@ -105,7 +103,6 @@ export const ProgressCircle = ({
                     </circle>
                 </svg>
 
-                {/* Texto en el centro */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-xl font-semibold text-red-400">
                         {Math.round(progress)}%

@@ -1,4 +1,3 @@
-// components/IssuesOverview.tsx
 import React from 'react';
 
 const issues = [
@@ -18,7 +17,6 @@ const issues = [
         score: 40,
     },
 ];
-
 
 const FinishedScan = () => {
     return (

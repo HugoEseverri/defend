@@ -17,13 +17,7 @@ export default function AppShell() {
         e.preventDefault()
         console.log('Onboarding enviado')
 
-        // 🔐 Primero cerrás el Onboarding
         setShowOnboarding(false)
-
-        // 🕒 Luego abrís Onboard con un pequeño delay
-        setTimeout(() => {
-            setShowOnboard(true)
-        }, 200)
     }
 
     const handleSubmitOnboard = (e: React.FormEvent<HTMLFormElement>) => {
@@ -41,21 +35,21 @@ export default function AppShell() {
     }
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen ml-9">
             {!showOnboarding && !showOnboard && <NavUser />}
 
-            <div className={(showOnboarding || showOnboard) ? 'blur-sm pointer-events-none' : ''}>
+            <div className={(showOnboarding || showOnboard) ? 'pointer-events-none' : ''}>
                 <Home />
             </div>
 
             {showOnboarding && (
-                <div className="fixed inset-0 flex justify-center items-center  bg-opacity-40 z-50">
+                <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-[#dfdfdfa4] z-50">
                     <Onboarding onClose={handleCloseOnboarding} onSubmit={handleSubmitOnboarding} />
                 </div>
             )}
 
             {showOnboard && !showOnboarding && (
-                <div className="fixed inset-0 flex justify-center items-center  bg-opacity-40 z-50">
+                <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-[#dfdfdfa4] z-50">
                     <Onboard onClose={handleCloseOnboard} onSubmit={handleSubmitOnboard} />
                 </div>
             )}

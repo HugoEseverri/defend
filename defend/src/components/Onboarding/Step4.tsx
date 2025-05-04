@@ -5,7 +5,7 @@ import { useUserStore } from '@/store/useUserStore';
 interface Step4Props {
     onFinish: () => void;
     onPrev: () => void;
-    onClose: () => void;  // Se agrega el onClose para cerrar el modal desde Step4
+    onClose: () => void;
 }
 
 const Step4: React.FC<Step4Props> = ({ onFinish, onPrev, onClose }) => {
@@ -22,8 +22,8 @@ const Step4: React.FC<Step4Props> = ({ onFinish, onPrev, onClose }) => {
         }
 
         setPassword(password);
-        onClose(); // Llamamos a onClose para cerrar el modal
-        onFinish(); // Llamamos a onFinish para proceder al siguiente paso
+        onClose();
+        onFinish();
     };
 
     return (

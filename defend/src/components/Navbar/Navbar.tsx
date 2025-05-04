@@ -1,23 +1,9 @@
 "use client"
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import Onboard from '@/components/Onboard/Onboard';
-import { useUserStore } from '@/store/useUserStore';
 
 const Navbar = () => {
-    const showOnboarding = useUserStore((state) => state.showOnboarding);
-    const closeOnboarding = useUserStore((state) => state.closeOnboarding);
-    const setShowOnboarding = useUserStore((state) => state.setShowOnboarding);
-
-    const handleOpenModal = () => {
-        setShowOnboarding(true);
-    };
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log('Formulario enviado');
-    };
     return (
         <div className="flex flex-col bg-white w-[240px] h-full rounded">
             <div className="mt-9">
@@ -39,28 +25,10 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
-                            className="block px-6 py-2 hover:bg-gray-200 transition-colors cursor-pointer"
-                            onClick={handleOpenModal}
-                        >
+                        <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
                             <span>User Profile</span>
-                        </a>
+                        </Link>
                     </li>
-
-                    {showOnboarding && (
-                        <>
-                            <div
-                                className="fixed inset-0 bg-gray-500 opacity-50 z-40"
-                                onClick={closeOnboarding}
-                            ></div>
-
-                            <div className="fixed inset-0 flex items-center justify-center z-50">
-                                <Onboard onClose={closeOnboarding} onSubmit={() => { }} />
-                            </div>
-                        </>
-                    )}
-
                 </ul>
             </div>
 
@@ -79,7 +47,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link href="#" className="block px-6 py-2 hover:bg-gray-200 transition-colors">
-                            <span className="pl-2">Network infrastructure</span>
+                            <span>Network infrastructure</span>
                         </Link>
                     </li>
                     <li>

@@ -6,7 +6,7 @@ import NavUser from '@/components/NavUser/NavUser';
 
 const HomeIssues = () => {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col ml-9">
             <div className="w-full">
                 <NavUser />
             </div>
