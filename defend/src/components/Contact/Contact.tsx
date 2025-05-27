@@ -6,10 +6,10 @@ function Contact() {
             <div className='flex flex-col mr-15'>
                 <h2 className='font-semibold text-[19px]'>Email</h2>
                 <ul className='text-[16.5px] space-y-3 mt-4'>
-                    <li>chris@codefend.com</li>
-                    <li>edd@codefend.com</li>
-                    <li>hernan@codefend.com</li>
-                    <li>nacho@codefend.com</li>
+                    <li>prueba@prueba.com</li>
+                    <li>prueba@prueba.com</li>
+                    <li>prueba@prueba.com</li>
+                    <li>prueba@prueba.com</li>
                 </ul>
             </div>
             <div className='flex flex-col mr-5'>
